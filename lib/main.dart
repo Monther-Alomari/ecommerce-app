@@ -4,7 +4,7 @@ import 'package:untitled/Forget.dart';
 import 'package:untitled/Hello.dart';
 import 'package:untitled/Register.dart';
 import 'package:untitled/Success.dart';
-import 'package:untitled/Tokotto.dart';
+import 'package:untitled/Tokoyo.dart';
 import 'package:untitled/logIn.dart';
 import 'package:untitled/Complete.dart';
 
@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-        home: SplashScreen(),
+        home:Tokoyo(),
     );
   }
 }
