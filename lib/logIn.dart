@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-// import 'package:LogIn/screens/LogIn/widgets/buttons.dart';
 
 class LogIn extends StatefulWidget {
   const LogIn({super.key});
@@ -11,145 +10,156 @@ class LogIn extends StatefulWidget {
 class _LogInState extends State<LogIn> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Container(
-        decoration: const BoxDecoration(
-            gradient: LinearGradient(
-                begin: Alignment.topLeft,
-                end: Alignment.topRight,
-                colors: <Color>[Colors.green, Colors.lightGreen])),
-        child: Column(
-            mainAxisAlignment: MainAxisAlignment.end,
-            crossAxisAlignment: CrossAxisAlignment.start,
+    return
+      // SafeArea(
+      //   child:
+      Scaffold(
+        body: Container(
+          width: MediaQuery.of(context).size.width,
+          decoration: BoxDecoration(
+              gradient: LinearGradient(colors: [
+                Colors.green.shade900,
+                Colors.green.shade500,
+                Colors.green.shade400
+              ])),
+          child: Column(
             children: [
-              headderTxt(context),
-              LogInBoxField(context),
-            ]),
-      ),
-    );
-  }
-
-  Container LogInBoxField(BuildContext context) {
-    return Container(
-        height: MediaQuery.of(context).size.height * 0.7,
-        decoration: const BoxDecoration(
-            color: Colors.white,
-            borderRadius: BorderRadius.only(
-                topLeft: Radius.circular(50), topRight: Radius.circular(50))),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-            LogInForm(),
-            LogInBtn(),
-            Text('LogIn with SNS',
-                style: Theme.of(context).textTheme.titleSmall),
-            LogInWithSocialMedia(),
-            SizedBox(
-              height: MediaQuery.of(context).size.height * 0.1,
-            )
-          ],
-        ));
-  }
-
-  Widget LogInForm() {
-    return Container(
-      decoration: BoxDecoration(
-        border: Border.all(width: 0.3, color: Colors.grey),
-        borderRadius: BorderRadius.circular(8),
-        boxShadow: [
-          BoxShadow(
-            color: Colors.grey.withOpacity(0.2),
-            spreadRadius: 8,
-            blurRadius: 7,
-            offset: const Offset(0, 3),
+              Container(
+                margin: const EdgeInsets.only(left: 25, bottom: 35),
+                height: MediaQuery.of(context).size.height / 4.5,
+                width: MediaQuery.of(context).size.width,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    Text(
+                      'Login',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 30,
+                      ),
+                    ),
+                    SizedBox(
+                      height: 8,
+                    ),
+                    Text(
+                      'Welcome Back',
+                      style: TextStyle(color: Colors.white, fontSize: 18),
+                    ),
+                  ],
+                ),
+              ),
+              Expanded(
+                child: Container(
+                  width: MediaQuery.of(context).size.width,
+                  decoration: const BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.vertical(
+                        top: Radius.circular(50),
+                      )),
+                  child: Column(
+                    children: [
+                      Container(
+                        decoration: BoxDecoration(
+                          borderRadius:
+                          const BorderRadius.all(Radius.circular(10)),
+                          color: Colors.white,
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.grey.withOpacity(0.4),
+                              spreadRadius: 13,
+                              blurRadius: 13,
+                              offset: const Offset(0, 10),
+                            ),
+                          ],
+                        ),
+                        margin: const EdgeInsets.only(
+                            top: 50, bottom: 40, left: 30, right: 30),
+                        child:  Column(
+                          children: [
+                            TextField(
+                              decoration: InputDecoration(
+                                  hintText: 'Email',
+                                  border: InputBorder.none,
+                                  hintStyle: TextStyle(color: Colors.grey),
+                                  contentPadding:
+                                  EdgeInsets.symmetric(horizontal: 10)),
+                            ),
+                            Divider(
+                              color: Colors.black45,
+                              height: 1,
+                            ),
+                            TextField(
+                              decoration: InputDecoration(
+                                  hintText: 'Password',
+                                  hintStyle: TextStyle(color: Colors.grey),
+                                  border: InputBorder.none,
+                                  contentPadding:
+                                  EdgeInsets.symmetric(horizontal: 10)),
+                            )
+                          ],
+                        ),
+                      ),
+                      MaterialButton(
+                        height: 40,
+                        minWidth: 200,
+                        onPressed: () {},
+                        color: Colors.green.shade700,
+                        textColor: Colors.white,
+                        shape: const StadiumBorder(),
+                        child: const Text('Login'),
+                      ),
+                      const SizedBox(
+                        height: 10,
+                      ),
+                      TextButton(
+                          onPressed: () {},
+                          child: Text(
+                            'Login with SNS',
+                            style: TextStyle(
+                                color: Colors.grey.shade500,
+                                fontWeight: FontWeight.bold),
+                          )),
+                      const SizedBox(
+                        height: 10,
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          MaterialButton(
+                            height: 40,
+                            minWidth: 140,
+                            onPressed: () {},
+                            color: Colors.blue,
+                            textColor: Colors.white,
+                            shape: const StadiumBorder(),
+                            child: const Text(
+                              'Facebook',
+                              style: TextStyle(fontWeight: FontWeight.bold),
+                            ),
+                          ),
+                          MaterialButton(
+                            height: 40,
+                            minWidth: 140,
+                            onPressed: () {},
+                            color: Colors.black,
+                            textColor: Colors.white,
+                            shape: const StadiumBorder(),
+                            child: const Text(
+                              'Github',
+                              style: TextStyle(fontWeight: FontWeight.bold),
+                            ),
+                          ),
+                        ],
+                      )
+                    ],
+                  ),
+                ),
+              )
+            ],
           ),
-        ],
-      ),
-      width: MediaQuery.of(context).size.width * 0.8,
-      child: Column(children: [
-        txtField(
-            'Email',
-            const BorderRadius.only(
-                topLeft: Radius.circular(8), topRight: Radius.circular(8))),
-        const Divider(
-          color: Colors.black54,
-          height: 1,
         ),
-        txtField(
-            'Password',
-            const BorderRadius.only(
-                bottomLeft: Radius.circular(8),
-                bottomRight: Radius.circular(8))),
-      ]),
-    );
-  }
-
-  Widget LogInWithSocialMedia() {
-    return SizedBox(
-      width: MediaQuery.of(context).size.width,
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: [
-          SizedBox(
-            width: MediaQuery.of(context).size.width * 0.3,
-            child: MaterialButton(
-              onPressed: () {},
-              shape: StadiumBorder(),
-              height: 40,
-              textColor: Colors.white,
-              color: Colors.blue,
-              splashColor: Colors.white12,
-              child: const Text('Facebook'),
-            ),
-          ),
-          // SizedBox(
-          //     width: MediaQuery.of(context).size.width * 0.3,
-          //     child: LogInButtons('Github', Colors.black, Colors.white)),
-        ],
-      ),
-    );
-  }
-
-  Widget LogInBtn() {
-    return SizedBox(
-      width: MediaQuery.of(context).size.width * 0.5,
-      child: MaterialButton(
-        onPressed: () {},
-        shape: const StadiumBorder(),
-        height: 40,
-        textColor: Colors.white,
-        color: Colors.green,
-        splashColor: Colors.greenAccent,
-        child: const Text('LogIn'),
-      ),
-    );
-  }
-
-  Widget txtField(String title, BorderRadius borderRadius) {
-    return TextField(
-      decoration: InputDecoration(
-        labelText: title,
-        fillColor: Colors.white,
-        filled: true,
-        enabledBorder: OutlineInputBorder(
-          borderSide: BorderSide(color: Colors.transparent),
-          borderRadius: borderRadius,
-        ),
-      ),
-    );
-  }
-
-  Padding headderTxt(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(left: 15, bottom: 20),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text('LogIn', style: Theme.of(context).textTheme.headlineLarge),
-          Text('Welcome Back',
-              style: Theme.of(context).textTheme.headlineSmall),
-        ],
-      ),
-    );
+        // ),
+      );
   }
 }

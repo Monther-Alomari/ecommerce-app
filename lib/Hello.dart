@@ -22,7 +22,7 @@ class _HelloState extends State<Hello> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Lottie.asset('lib/assets/login2.json', height:200, width: 200),
+              Lottie.asset('lib/assets/lottie/login2.json', height:200, width: 200),
               Container(
                 margin: const EdgeInsets.only(left: 20, right: 20),
                 padding:

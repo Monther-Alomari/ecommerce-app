@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-// import 'otp.dart';
+
 
 class Complete extends StatelessWidget {
   const Complete({super.key});
@@ -64,7 +64,7 @@ class Complete extends StatelessWidget {
                         padding: const EdgeInsets.only(
                             right: 20, top: 13, bottom: 13),
                         child: SvgPicture.asset(
-                          'assets/icons/User Icon.svg',
+                          'lib/assets/icons/User Icon.svg',
                           // ignore: deprecated_member_use
                           color: Colors.black87,
                           fit: BoxFit.contain,
@@ -95,7 +95,7 @@ class Complete extends StatelessWidget {
                         padding: const EdgeInsets.only(
                             right: 20, top: 13, bottom: 13),
                         child: SvgPicture.asset(
-                          'assets/icons/User Icon.svg',
+                          'lib/assets/icons/User Icon.svg',
                           // ignore: deprecated_member_use
                           color: Colors.black87,
                           fit: BoxFit.contain,
@@ -127,7 +127,7 @@ class Complete extends StatelessWidget {
                         padding: const EdgeInsets.only(
                             right: 20, top: 13, bottom: 13),
                         child: SvgPicture.asset(
-                          'assets/icons/Phone.svg',
+                          'lib/assets/icons/Phone.svg',
                           fit: BoxFit.contain,
                         ),
                       ))),
@@ -156,7 +156,7 @@ class Complete extends StatelessWidget {
                         padding: const EdgeInsets.only(
                             right: 20, top: 13, bottom: 13),
                         child: SvgPicture.asset(
-                          'assets/icons/Location point.svg',
+                          'lib/assets/icons/Location point.svg',
                           fit: BoxFit.contain,
                         ),
                       ))),
@@ -188,6 +188,7 @@ class Complete extends StatelessWidget {
                 textAlign: TextAlign.center,
                 style: TextStyle(color: Colors.grey.shade700),
               ),
+              SizedBox(height: 10,)
             ],
           ),
         ),

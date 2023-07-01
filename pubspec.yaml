@@ -41,6 +41,7 @@ dependencies:
   unicons: ^2.1.1
   carousel_slider: ^4.2.1
   banner_carousel: ^1.2.1
+  badges: ^3.1.1
 
 dev_dependencies:
   flutter_test:

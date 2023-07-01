@@ -1,5 +1,4 @@
 import 'package:banner_carousel/banner_carousel.dart';
-
 import 'package:flutter/material.dart';
 
 class Tokoyo extends StatefulWidget {
@@ -36,14 +35,14 @@ class _TokoyoState extends State<Tokoyo> {
                   height: 75,
                 ),
                 BannerCarousel(
-                    height: 375,
+                    height: 350,
                     activeColor: Colors.deepOrangeAccent,
                     customizedBanners: List.generate(
                         3,
                             (index) => Container(
                           margin: const EdgeInsets.only(bottom: 75),
                           child: Image.asset(
-                              'lib/assets/splash_${index + 1}.png'),
+                              'lib/assets/images/splash_${index + 1}.png'),
                         ))),
                 Container(
                   margin: const EdgeInsets.only(top: 125),
@@ -63,6 +62,7 @@ class _TokoyoState extends State<Tokoyo> {
                     ),
                   ),
                 ),
+                // SizedBox(height: 30,)
               ],
             ),
           ),

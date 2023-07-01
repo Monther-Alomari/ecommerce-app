@@ -16,7 +16,7 @@ class _SuccessState extends State<Success> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Image.asset('lib/assets/succss.png',
+              Image.asset('lib/assets/images/Pattern Success.png',
                 height: 400,
               ),
               const SizedBox(height: 10,),
